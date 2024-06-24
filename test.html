@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<link rel="stylesheet" href="test.css">
+
+<body>
+
+
+
+<main>
+<div id="q1">
+    <img src="spikything.png" alt="spiky thing" width="150" height="150">
+    <br>
+    <h4>What is this object called? (No capitals, yes spaces)</h4>
+    <br>
+
+    <input type="text" id="input"0></input>
+    <br>
+    <input type="button" value="submit" onclick="z()">
+    <h3 id="err"></h3>
+    <br>
+</div>
+    
+
+</main>
+
+<main2>
+
+
+    <div id="q2" style="visibility: hidden">
+        <h4>Fill in the blanks: "___zo"</h4>
+        <br>
+
+        <input type="text" id="input2"0></input>
+        <br>
+        <input type="button" value="submit" onclick="x()">
+        <h3 id="err2"></h3>
+        <br>
+    </div>
+    
+</main2>
+</body>
+
+<script>
+    function z() {
+        var a = document.getElementById("input");
+        if ((a.value == "spiky thing") || (a.value == "spikey thing")) {
+            document.getElementById('err').innerHTML = 'correct';
+            document.getElementById("q1").style.visibility = 'hidden';
+            document.getElementById("q2").style.visibility = 'visible';
+        } else {
+            document.getElementById('err').innerHTML = 'Incorrect. Please try again';
+        }
+    }
+    
+    function x(){
+        var a = document.getElementById("input2");
+        if ((a.value == "wen") || (a.value == "Wen")) {
+            document.getElementById('err2').innerHTML = 'Correct. Welcome, Mr. Glaeser';
+        } else {
+            document.getElementById('err2').innerHTML = 'Incorrect. Please try again';
+        }
+    }
+    
+</script>
+</html>
