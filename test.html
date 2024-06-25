@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+
+<head>
+    <link rel="stylesheet" type="text/css" href="test.css">
+    <title>Verification Test</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+<main>
+    <a href="index.html" id="exitbutton">
+        <img src="cross.png" alt="exitbutton" width="100px" height="100px">
+    </a>
+<div id="q1">
+    <img src="spikything.png" alt="spiky thing" width="150" height="150">
+    
+    <h4>What is this object called? (No capitals, yes spaces)</h4>
+    <input type="text" id="input">
+    <br>
+    
+    <input type="button" value="submit" onclick="z()">
+    <h3 id="err"></h3>
+    
+</div>
+
+    <div id="q2" style="visibility: hidden">
+        <h4 id="blanks">Fill in the blanks: "_ _ _ zo"</h4>
+
+
+        <input type="text" id="input2">
+
+        <input type="button" value="submit" onclick="x()">
+        <h3 id="err2"></h3>
+
+    </div>
+
+    <div class="image" id="mousemove" style="visibility: hidden">
+        <img src="cross.png" id="img" alt="cross" width="100px" height="100px">
+    </div>
+    
+    <div id="final" style="visibility: hidden">
+        <h4>You know what to do.</h4>
+        <img src="nvidia.png" id="nvidia" alt="nvidia" width="100px" height="100px">
+    </div>
+    
+</main>
+
+</body>
+
+<script>
+    let hasCross = 0;
+    document.getElementById("img").onclick = function(){
+    hasCross = 1;
+    document.getElementById("img").style.left = 0;
+    document.getElementById("img").style.top = 0;
+    document.getElementById("img").style.pointerEvents = "none"; 
+    }
+    
+    $(document).mousemove(function(e){
+        if(hasCross == 1){
+            $("#mousemove").css({left:e.pageX-50, top:e.pageY-50});
+        }
+    });
+    
+    document.getElementById("nvidia").onclick = function (){
+        if(hasCross == 1){
+            window.location.href="linusslideshow.html";
+            debug.log("print");
+        }
+    }
+    
+</script>
+
+
+
+<script>
+    function z() {
+        let a = document.getElementById("input");
+        if ((a.value == "spiky thing") || (a.value == "spikey thing")) {
+            document.getElementById('err').innerHTML = 'correct';
+            document.getElementById("q1").style.visibility = 'hidden';
+            document.getElementById("q2").style.visibility = 'visible';
+            
+        } else {
+            document.getElementById('err').innerHTML = 'Incorrect. Please try again';
+        }
+    }
+    
+    function x(){
+        let a = document.getElementById("input2");
+        if ((a.value == "wen") || (a.value == "Wen")) {
+            document.getElementById('err2').innerHTML = 'Correct. Welcome, Mr. Glaeser';
+            document.getElementById("exitbutton").style.visibility = 'hidden'; 
+            document.getElementById("mousemove").style.visibility = 'visible';
+            document.getElementById("final").style.visibility = 'visible';
+            document.getElementById("q2").style.visibility = 'hidden';
+        } else {
+            document.getElementById('err2').innerHTML = 'Incorrect. Please try again';
+        }
+    }
+</script>
+</html>
