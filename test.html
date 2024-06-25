@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 
-<link rel="stylesheet" href="test.css">
 
 <head>
+    <link rel="stylesheet" type="text/css" href="test.css">
     <title>Verification Test</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
@@ -11,7 +11,7 @@
 <body>
 
 <main>
-    <a href="/test.html" id="exitbutton">
+    <a href="index.html" id="exitbutton">
         <img src="cross.png" alt="exitbutton" width="100px" height="100px">
     </a>
 <div id="q1">
@@ -27,7 +27,7 @@
 </div>
 
     <div id="q2" style="visibility: hidden">
-        <h4>Fill in the blanks: "___zo"</h4>
+        <h4 id="blanks">Fill in the blanks: "_ _ _ zo"</h4>
 
 
         <input type="text" id="input2">
@@ -67,7 +67,7 @@
     
     document.getElementById("nvidia").onclick = function (){
         if(hasCross == 1){
-            window.location.href="index.html";
+            window.location.href="linusslideshow.html";
             debug.log("print");
         }
     }
