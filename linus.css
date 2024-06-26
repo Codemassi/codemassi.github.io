@@ -1,0 +1,83 @@
+#light{
+    
+    width: 8vw;
+}
+#lightDIV{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+#switchDIV{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+
+
+#switch{
+    margin-top: 20vh;
+    width: 10vw;
+}
+
+#doorDIV{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+h1{
+    position: static;
+    text-align: center;
+    margin-top: 20vh;
+    color: #f9e2af;
+    font-size: 3vw;
+    -webkit-text-stroke-width: 0.2vw;
+    -webkit-text-stroke-color: #1e1e2e;
+}
+
+
+
+.portal{
+    border-radius: 50%;
+    display: inline-block;
+    height: 10vw;
+    width: 10vw;
+}
+
+#portal1{
+    float: left;
+    margin-top: 0; 
+    background-size: 10vw;
+    background-image: url("linus/PHOTO-2024-06-25-01-51-42_12.jpg");
+}
+#portal2{
+    position: relative;
+    float:right;
+    background-color: #ffce0b;
+}
+#portal3{
+    position: relative;
+    float: left;
+    top:40vh;
+    right:10vw;
+    background-color: #ffce0b;
+}
+#portal4{
+    position: relative;
+    float: right;
+    top:40vh;
+    left: 10vw;
+    background-color: #ffce0b;
+}
+
+#door{
+    position: relative;
+    margin-top: 50vh;
+    width: 20vw;
+}
+
+body{
+    background-color: #181825;
+}

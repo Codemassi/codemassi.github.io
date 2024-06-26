@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html style="font-size: 15px;font-family: 'RobotoMono Nerd Font', Roboto, sans-serif;" lang="en"
+      xmlns="http://www.w3.org/1999/html">
+
+
+<body style="background-size: 20vh; filter: drop-shadow(0 0 3px black)">
+
+</body>
+
+<head>
+    <link rel="icon" type="image/x-icon" href="favicons/linusfavicon.ico">
+    <link rel="stylesheet" type="text/css" href="linus.css">
+    <title>THE VAULT</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<main>
+    <div id="lightDIV">
+        <img src="lbulb_off.png" alt="light bulb off" id="light">
+    </div>
+    <div id="switchDIV">
+        <img src="switch.png" alt="switch" id="switch">
+    </div>
+    <h1 id="CTKText">Go into the portals and collect the Keys</h1>
+   
+    <div id="portals" style="visibility: hidden">
+        <div id="portal1" class="portal"></div>
+        <div id="portal2" class="portal"></div>
+        <div id="portal3" class="portal"></div>
+        <div id="portal4" class="portal"></div>
+    </div>
+    
+    <div id="doorDIV" style="visibility: hidden">
+        <img src="Door_Closed.png" alt="door" id="door">
+    </div>
+</main>
+
+
+<script>
+   let hasClickedLight = 0; 
+   let bgImagesArray = [
+       'url("linus/PHOTO-2024-06-25-01-51-42.jpg")',
+       'url("linus/PHOTO-2024-06-25-01-51-42_1.jpg")',
+       'url("linus/PHOTO-2024-06-25-01-51-42_2.jpg"',
+       'url("linus/PHOTO-2024-06-25-01-51-42_6.jpg")',
+       'url("linus/PHOTO-2024-06-25-01-51-42_7.jpg")',
+       'url("linus/PHOTO-2024-06-25-01-51-42_9.jpg")',
+       'url("linus/PHOTO-2024-06-25-01-51-42_11.jpg")',
+       'url("linus/PHOTO-2024-06-25-01-51-42_13.jpg")',
+       'url("linus/PHOTO-2024-06-25-01-51-42_15.jpg")',
+       'url("linus/PHOTO-2024-06-25-01-51-42_17.jpg")',
+       'url("linus/PHOTO-2024-06-25-01-51-42_20.jpg")',
+       'url("linus/PHOTO-2024-06-25-01-51-42_21.jpg")',
+   ]
+   
+   var lightElement = document.getElementById("light");
+    document.getElementById("switch").onclick = function(){
+        if(hasClickedLight == 0){
+            hasClickedLight = 1;
+            playSound("sound/light_on.mp3");
+            lightElement.src="lbulb_on.png";
+            lightElement.style.transform="rotate(180deg)";
+            document.getElementById("switch").style.visibility="hidden";
+            document.getElementById("CTKText").style.visibility="hidden";
+            
+            document.getElementById("door").style.visibility="visible";
+            document.getElementById("portals").style.visibility="visible";
+            
+            let bgImg = bgImagesArray[ Math.floor(Math.random() * bgImagesArray.length) ];
+            console.log(bgImg) 
+            document.body.style.backgroundImage=bgImg;
+        }
+    }
+
+   //Portals
+   document.getElementById("portal1").onclick = function(){
+        window.location.href="linusslideshow.html";
+   }
+
+
+</script>
+
+<script>
+    //Sound effects code
+    function playSound(url) {
+        const audio = new Audio(url);
+        audio.play();
+    }
+</script>
+
+</html>
+

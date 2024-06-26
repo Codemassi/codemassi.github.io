@@ -5,52 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cab10ec8-e324-4e94-8c41-6b3f924d0a39" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.codemassi.github.io.dir/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.codemassi.github.io.dir/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.codemassi.github.io.dir/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.codemassi.github.io.dir/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Door_Closed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Door_Open.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Key.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/back_button.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c_book.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cross.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/favicons/linusfavicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/keyCollected.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/linus/PHOTO-2024-06-25-01-51-42.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/linus/PHOTO-2024-06-25-01-51-42_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/linus/PHOTO-2024-06-25-01-51-42_10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/linus/PHOTO-2024-06-25-01-51-42_11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/linus/PHOTO-2024-06-25-01-51-42_12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/linus/PHOTO-2024-06-25-01-51-42_13.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/linus/PHOTO-2024-06-25-01-51-42_14.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/linus/PHOTO-2024-06-25-01-51-42_15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/linus/PHOTO-2024-06-25-01-51-42_16.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/linus/PHOTO-2024-06-25-01-51-42_17.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/linus/PHOTO-2024-06-25-01-51-42_18.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/linus/PHOTO-2024-06-25-01-51-42_19.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/linus/PHOTO-2024-06-25-01-51-42_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/linus/PHOTO-2024-06-25-01-51-42_20.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/linus/PHOTO-2024-06-25-01-51-42_21.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/linus/PHOTO-2024-06-25-01-51-42_3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/linus/PHOTO-2024-06-25-01-51-42_4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/linus/PHOTO-2024-06-25-01-51-42_5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/linus/PHOTO-2024-06-25-01-51-42_6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/linus/PHOTO-2024-06-25-01-51-42_7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/linus/PHOTO-2024-06-25-01-51-42_8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/linus/PHOTO-2024-06-25-01-51-42_9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/linusslideshow.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/linusslideshow.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nvidia.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sound/door-1-open.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sound/key-get.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sound/keysound.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sound/slide.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spikything.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/transparent.png" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/diss.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diss.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linus.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linus.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.codemassi.github.io.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.codemassi.github.io.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linusslideshow.html" beforeDir="false" afterPath="$PROJECT_DIR$/linusslideshow.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,6 +71,7 @@
       <updated>1719228211446</updated>
       <workItem from="1719228214281" duration="22938000" />
       <workItem from="1719298838739" duration="18933000" />
+      <workItem from="1719408505835" duration="6738000" />
     </task>
     <servers />
   </component>

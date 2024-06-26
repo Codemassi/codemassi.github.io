@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html style="font-size: 15px;font-family: 'RobotoMono Nerd Font', Roboto, sans-serif;" lang="en"
+      xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <link rel="icon" type="image/x-icon" href="favicons/linusfavicon.ico">
+    <link rel="stylesheet" type="text/css" href="linusslideshow.css">
+    <title>The Linus Archives</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<main>
+    <h4>Welcome To</h4>
+    <h1>The Linus Archives</h1>
+    <p>Click to begin</p>
+    <div>
+        <span class="circle" id="exit"></span>
+        <img src="back_button.png" alt="back" id="back_button">
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <img src="Key.png" id="key" style="visibility: hidden">
+        </div>
+        <div class="column">
+            <img src="linus/PHOTO-2024-06-25-01-51-42_8.jpg" id="image">
+        </div>
+        <div class="column">
+            <img src="transparent.png" width="400" height="400" id="transparent">;
+        </div>
+    </div>
+</main>
+
+
+<script>
+    document.getElementById("image").onclick = function(){
+        nextImage();
+        playSound("sound/slide.mp3");
+    }
+
+    document.getElementById("back_button").onclick = function(){
+        window.location.href="linus.html";
+    }
+
+    document.getElementById("key").onclick = function (){
+        if(hasKey == 0){
+            playSound("sound/key-get.mp3");
+            //Add key0
+            localStorage.setItem("key0", "y");
+            document.getElementById("key").src = "keyCollected.png";
+            hasKey = 1;
+        }
+    }
+
+    //Slideshow images
+    let imgs = [
+        'linus/PHOTO-2024-06-25-01-51-42_8.jpg',
+        "linus/PHOTO-2024-06-25-01-51-42_17.jpg",
+        "linus/PHOTO-2024-06-25-01-51-42_1.jpg",
+        "linus/PHOTO-2024-06-25-01-51-42_2.jpg",
+        "linus/PHOTO-2024-06-25-01-51-42_4.jpg",
+        "linus/PHOTO-2024-06-25-01-51-42_13.jpg",
+        "linus/PHOTO-2024-06-25-01-51-42_1.jpg",
+        "linus/PHOTO-2024-06-25-01-51-42_9.jpg",
+        "linus/PHOTO-2024-06-25-01-51-42_10.jpg",
+        "linus/PHOTO-2024-06-25-01-51-42_11.jpg",
+        "linus/PHOTO-2024-06-25-01-51-42_15.jpg",
+        "linus/PHOTO-2024-06-25-01-51-42_16.jpg",
+        "linus/PHOTO-2024-06-25-01-51-42_18.jpg",
+        "linus/PHOTO-2024-06-25-01-51-42_19.jpg",
+        "linus/PHOTO-2024-06-25-01-51-42_20.jpg",
+    ]
+    let currentImg = 0;
+    let imgElement = document.getElementById("image");
+    let hasKey = 0;
+    function nextImage(){
+        currentImg++;
+        if(currentImg == imgs.length && hasKey == 0){
+            document.getElementById("key").style.visibility = 'visible';
+        }
+        currentImg = currentImg % imgs.length;
+        imgElement.src = imgs[currentImg];
+
+    }
+
+</script>
+
+<script>
+    //Sound effects code
+    function playSound(url) {
+        const audio = new Audio(url);
+        audio.play();
+    }
+</script>
+
+</html>
+
