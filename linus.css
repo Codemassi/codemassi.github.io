@@ -1,24 +1,36 @@
 #light{
-    
     width: 8vw;
+    user-select: none;
 }
 #lightDIV{
     display: flex;
     justify-content: center;
-    align-self: center;
+    align-self: center
 }
 
 #switchDIV{
     display: flex;
     justify-content: center;
-    align-self: center;
 }
 
-
+#keyCount{
+    z-index: 2;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    bottom: 8px;
+    width: 12vw;
+    text-align: center;
+    max-width: calc(100vw - 8px *2);
+    margin-inline: auto;
+    white-space: nowrap;
+    user-select: none;
+}
 
 #switch{
     margin-top: 20vh;
     width: 10vw;
+    user-select: none;
 }
 
 #doorDIV{
@@ -35,47 +47,80 @@ h1{
     font-size: 3vw;
     -webkit-text-stroke-width: 0.2vw;
     -webkit-text-stroke-color: #1e1e2e;
+    user-select: none;
 }
 
 
 
 .portal{
+    z-index: 1;
     border-radius: 50%;
     display: inline-block;
-    height: 10vw;
-    width: 10vw;
+    height: 20vw;
+    width: 20vw;
+    background-size: 25.7vw;
+    
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
+@keyframes spinL {
+   from{
+       transform: rotate(0deg);
+   } 
+    to{
+        transform:rotate(-360deg);
+    }
+}
+
+@keyframes spinR {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+
 #portal1{
+    animation-name: spinL;
     float: left;
     margin-top: 0; 
-    background-size: 10vw;
-    background-image: url("linus/PHOTO-2024-06-25-01-51-42_12.jpg");
+    background-image: url("portal.png");
+    user-select: none;
 }
 #portal2{
+    animation-name: spinR;
     position: relative;
     float:right;
-    background-color: #ffce0b;
+   background-image: url("portal.png"); 
 }
 #portal3{
+    animation-name: spinR;
     position: relative;
     float: left;
     top:40vh;
     right:10vw;
-    background-color: #ffce0b;
+    background-image: url("portal.png");
+    user-select: none;
 }
 #portal4{
+    animation-name: spinL;
     position: relative;
     float: right;
     top:40vh;
     left: 10vw;
-    background-color: #ffce0b;
+    background-image: url("portal.png");
+    user-select: none;
 }
 
 #door{
     position: relative;
     margin-top: 50vh;
     width: 20vw;
+    user-select: none;
 }
 
 body{

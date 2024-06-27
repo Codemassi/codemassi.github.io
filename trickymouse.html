@@ -5,29 +5,27 @@
 <head>
     <link rel="icon" type="image/x-icon" href="favicons/linusfavicon.ico">
     <link rel="stylesheet" type="text/css" href="diss.css">
-    <title>ITS DISS TIME BABY</title>
+    <title>Catch Me If You Can</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 
-<script src="http://www.youtube.com/player_api"></script>
 
 <main>
-   
-    <div id="player"></div>
-    
+
+
     <div>
         <span class="circle" id="exit"></span>
-        <img src="back_button.png" alt="back" id="back_button" draggable="false">
+        <img src="back_button.png" alt="back" id="back_button">
     </div>
 
-    <img src="Key.png" id="key" style="visibility: hidden" draggable="false">
+    <img src="Key.png" id="key" style="visibility: hidden">
 </main>
 
 
 <script>
     let hasKey = 0;
-    
+ 
     document.getElementById("back_button").onclick = function(){
         window.location.href="linus.html";
     }
@@ -41,42 +39,11 @@
             hasKey = 1;
         }
     }
-    
+
 </script>
 
 
-<script>
-    //youtube player
-    var player;
-    function onYouTubePlayerAPIReady() {
-        player = new YT.Player('player', {
-            height: '390',
-            width: '640',
-            videoId: '4PnUfYhbDDM',
-            events: {
-                'onReady': onPlayerReady,
-                'onStateChange': onPlayerStateChange
-            },
-            playerVars: {
-              'controls': 0 
-            }
-        });
-    }
 
-    // autoplay video
-    function onPlayerReady(event) {
-        event.target.playVideo();
-    }
-
-    // when video ends
-    function onPlayerStateChange(event) {
-        if(event.data === 0) {
-            if(hasKey == 0){
-                document.getElementById("key").style.visibility = "visible";
-            }
-        }
-    }
-</script>
 
 <script>
     //Sound effects code

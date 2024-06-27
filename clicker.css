@@ -1,0 +1,95 @@
+#key{
+    position: fixed;
+    inset: 0px;
+    max-width: 100vw;
+    max-height: 100vh;
+    margin: auto;
+    width: 15vw;
+}
+#back_button{
+    position: fixed;
+    left:1vh;
+    top:1vh;
+    width: 3vw;
+}
+
+#exit{
+    position: fixed;
+    left: 1vh;
+    top: 1vh;
+    height: 3vw;
+    width: 3vw;
+    background-color: #fb4934;
+}
+
+.circle{
+    border-radius: 50%;
+    display: inline-block;
+}
+
+#fragCounter{
+    text-align: center;
+    font-size: 1.5vw;
+    color: #d79921
+}
+
+#counter{
+    text-align: center;
+    font-size: 2vw;
+    color: #458588;
+}
+
+#elementText{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#images{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 9vh;
+    bottom: 0;
+}
+
+#farmer{
+    width: 3vw;
+}
+#octonauts{
+    width: 7vw;
+}
+#factory{
+    width: 10vw;
+}
+#locksmith{
+    width: 7vw;
+}
+#keyImg{
+    width: 7vw;
+}
+
+#benny{
+   position: fixed;
+    width: 10vw;
+    user-select: none; 
+    height: 10vw;
+    inset: 0;
+    margin-top: 20vh;
+    margin-inline: auto;
+    background-size: 11vw;
+    background-image: url("benny.png");
+}
+
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+body{
+    background-color: #282828;
+}

@@ -51,6 +51,14 @@ h2, h3, h4, h5, h6 {
     color: #83a598;
 }
 
+#wenzo{
+    position: fixed;
+    top:1vh;
+    right:1vh;
+    width: 4vw;
+    opacity: 0.45;
+}
+
 #input{
     border-radius: 25px;
     border: 2px solid #8ec07c
@@ -76,6 +84,7 @@ input, select, textarea{
     left:1vw;
     top:1vw;
     z-index: 2;
+    user-select: none;
 }
 
 #mousemove{

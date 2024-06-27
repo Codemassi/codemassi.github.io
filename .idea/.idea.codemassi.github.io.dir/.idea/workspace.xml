@@ -5,12 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cab10ec8-e324-4e94-8c41-6b3f924d0a39" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/diss.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/diss.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/linus.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/linus.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clicker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clicker.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trickymouse.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trickymouse.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.codemassi.github.io.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.codemassi.github.io.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diss.css" beforeDir="false" afterPath="$PROJECT_DIR$/diss.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diss.html" beforeDir="false" afterPath="$PROJECT_DIR$/diss.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linus.css" beforeDir="false" afterPath="$PROJECT_DIR$/linus.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linus.html" beforeDir="false" afterPath="$PROJECT_DIR$/linus.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linusslideshow.css" beforeDir="false" afterPath="$PROJECT_DIR$/linusslideshow.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/linusslideshow.html" beforeDir="false" afterPath="$PROJECT_DIR$/linusslideshow.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.css" beforeDir="false" afterPath="$PROJECT_DIR$/test.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +56,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.maddyhome.idea.vim.ui.VimEmulationConfigurable&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -71,7 +77,12 @@
       <updated>1719228211446</updated>
       <workItem from="1719228214281" duration="22938000" />
       <workItem from="1719298838739" duration="18933000" />
-      <workItem from="1719408505835" duration="6738000" />
+      <workItem from="1719408505835" duration="12274000" />
+      <workItem from="1719422247519" duration="4300000" />
+      <workItem from="1719426896784" duration="132000" />
+      <workItem from="1719433238460" duration="4945000" />
+      <workItem from="1719473575431" duration="7056000" />
+      <workItem from="1719514536559" duration="564000" />
     </task>
     <servers />
   </component>
@@ -81,5 +92,9 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

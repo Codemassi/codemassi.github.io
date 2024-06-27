@@ -5,6 +5,8 @@ h1{
     text-align: center;
     font-size: 4vw;
     margin-bottom: 1vh;
+
+    user-select: none;
 }
 body{
     background-color: #1e1e2e;
@@ -16,6 +18,8 @@ h4{
     color: #cdd6f4;
     font-size: 2vw;
     margin-bottom: 0px;
+
+    user-select: none;
 }
 
 p{
@@ -23,7 +27,8 @@ p{
     position: relative;
     text-align: center;
     font-size: 1.5vw;
-    color: #eba0ac
+    color: #eba0ac;
+    user-select: none;
 }
 
 .row{
@@ -38,6 +43,7 @@ p{
 #image {
     margin-top: 0;
     width: 100%;
+    user-select: none;
 }
 
 #key{

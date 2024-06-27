@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html style="font-size: 15px;font-family: 'RobotoMono Nerd Font', Roboto, sans-serif;" lang="en"
+      xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <link rel="icon" type="image/x-icon" href="favicons/linusfavicon.ico">
+    <link rel="stylesheet" type="text/css" href="clicker.css">
+    <title>Benny Clicker</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<main>
+   
+    <h1 id="counter">Octonauts: 0</h1>
+    <h1 id="fragCounter">Key Fragments: 0</h1>
+    <div>
+        <span class="circle" id="exit"></span>
+        <img src="back_button.png" alt="back" id="back_button">
+    </div>
+   
+    <div>
+        <img src="benny.png" alt=button" id="benny" draggable="false">
+    </div>
+   
+    <div id="images">
+        <img src="farmer.png" alt="farmer" id="farmer">
+        <img src="octonauts.png" alt="octos" id="octonauts">
+        <img src="factory.png" alt="factory" id="factory">
+        <img src="locksmith.png" alt="locksmith" id="locksmith">
+        <img src="Key.png" alt="keys" id="keyImg">
+    </div>
+    
+    <div id="elementText">
+        <h2>Gives 2 octonauts every second. Costs: 20 octonauts</h2>
+        <h2>Gives 5 more octonauts per click. Costs: 100 octonauts</h2>
+        <h2>Gives</h2>
+        <h2>Gives 2 octonauts every second. Costs: 20 octonauts</h2>
+        <h2>Gives 2 octonauts every second. Costs: 20 octonauts</h2>
+    </div>
+
+    <img src="Key.png" id="key" style="visibility: hidden">
+   
+</main>
+
+
+<script>
+    
+    let clicks = 0;
+    let farmers = 0;
+    let octos = 0;
+    let locksmiths = 0;
+    let factories = 0;
+    
+    let fC = 20;
+    
+    
+    let hasKey = 0;
+    
+    let counterElement = document.getElementById("counter");
+    let benny = document.getElementById("benny");
+    let farmerElement = document.getElementById("farmer");
+    let octosElement = document.getElementById("octonauts");
+    let locksmithElement = document.getElementById("locksmith");
+    let factoryElement = document.getElementById("factory");
+    let keyElement = document.getElementById("keyImg");
+    
+    benny.onclick = function (){
+        clicks++;  
+        counterElement.innerText = "Octonauts: " + clicks;
+    }
+    
+    farmerElement.onclick = function (){
+        if(clicks >= fC){
+            clicks-= fC;
+            farmers++;
+            fC = Math.floor(20 * 1.15 * farmers);
+        }
+        
+    }
+
+    document.getElementById("back_button").onclick = function(){
+        window.location.href="linus.html";
+    }
+
+    document.getElementById("key").onclick = function (){
+        if(hasKey == 0){
+            playSound("sound/key-get.mp3");
+            //Add key0
+            localStorage.setItem("key3", "y");
+            document.getElementById("key").src = "keyCollected.png";
+            hasKey = 1;
+        }
+    }
+    
+    
+    const farm = () =>{
+      clicks += 2 * farmers;
+      document.getElementById("counter").innerText = "Octonauts: " + clicks;
+    };
+    //+2 octonauts per farmer every sec
+    setInterval(farm,1000);
+
+</script>
+
+<script>
+    //Sound effects code
+    function playSound(url) {
+        const audio = new Audio(url);
+        audio.play();
+    }
+</script>
+
+</html>
+
