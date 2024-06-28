@@ -12,7 +12,7 @@
 <main>
    
     <h1 id="counter">Octonauts: 0</h1>
-    <h1 id="fragCounter">Key Fragments: 0</h1>
+    <h1 id="fragCounter"></h1>
     <div>
         <span class="circle" id="exit"></span>
         <img src="back_button.png" alt="back" id="back_button">
@@ -23,21 +23,34 @@
     </div>
    
     <div id="images">
-        <img src="farmer.png" alt="farmer" id="farmer">
-        <img src="octonauts.png" alt="octos" id="octonauts">
-        <img src="factory.png" alt="factory" id="factory">
-        <img src="locksmith.png" alt="locksmith" id="locksmith">
-        <img src="Key.png" alt="keys" id="keyImg">
-    </div>
-    
-    <div id="elementText">
-        <h2>Gives 2 octonauts every second. Costs: 20 octonauts</h2>
-        <h2>Gives 5 more octonauts per click. Costs: 100 octonauts</h2>
-        <h2>Gives</h2>
-        <h2>Gives 2 octonauts every second. Costs: 20 octonauts</h2>
-        <h2>Gives 2 octonauts every second. Costs: 20 octonauts</h2>
+        <div>
+
+            <img src="farmer.png" alt="farmer" id="farmer">
+            <h2  class="space"id="fT">Gives 15 octonauts every second. Costs: 20 octonauts</h2>
+        </div>
+       <div>
+           <img src="octonauts.png" alt="octos" id="octonauts">
+           <h2  class="space"id="oT">Gives 10 more octonauts per click. Costs: 50 octonauts</h2>
+       </div>
+        <div>
+            <img src="factory.png" alt="factory" id="factory">
+            <h2  class="space"id="fyT">Gives 50 octonauts every seconds Costs: 100 octonauts</h2>
+        </div>
+        <div>
+            <img src="locksmith.png" alt="locksmith" id="locksmith">
+            <h2  class="space"id="lT">??? Costs: 25,000 octonauts</h2>
+            
+        </div>
+       <div>
+           <img src="Key.png" alt="keys" id="keyImg">
+           <h2  class="space"id="kT">The key. Costs: ??? and 100,000 octonauts</h2>
+       </div> 
+        
+        
     </div>
 
+
+    <h2 id="partC">Farmers: 0 Crewmates: 0 Factories: 0 Locksmiths: 0</h2>
     <img src="Key.png" id="key" style="visibility: hidden">
    
 </main>
@@ -50,9 +63,16 @@
     let octos = 0;
     let locksmiths = 0;
     let factories = 0;
+    let fragments = 0;
+    
     
     let fC = 20;
+    let oC = 50;
+    let fyC = 100;
+    let lsC = 25000;
     
+    //Lock smiths ever bought
+    let lsB = 0
     
     let hasKey = 0;
     
@@ -65,18 +85,60 @@
     let keyElement = document.getElementById("keyImg");
     
     benny.onclick = function (){
-        clicks++;  
+        clicks+= 1 + octos;  
         counterElement.innerText = "Octonauts: " + clicks;
+        playSound("sound/squish.mp3")
     }
     
     farmerElement.onclick = function (){
         if(clicks >= fC){
-            clicks-= fC;
+            clicks -= fC;
             farmers++;
             fC = Math.floor(20 * 1.15 * farmers);
+            document.getElementById("fT").innerText = "Gives 15 octonauts every second. Costs: " + fC +" octonauts";
+            document.getElementById("partC").innerText = "Farmers: " + farmers + " Crewmates: " + octos + " Factories: " + factories + " Locksmiths: " + locksmiths;
         }
-        
     }
+    octosElement.onclick = function (){
+        if(clicks >= oC){
+            clicks -= oC;
+            octos++;
+            oC = Math.floor(50 * 1.15 * octos);
+            document.getElementById("oT").innerText = "Gives 10 more octonauts per click. Costs: " + oC + " octonauts";
+            document.getElementById("partC").innerText = "Farmers: " + farmers + " Crewmates: " + octos + " Factories: " + factories + " Locksmiths: " + locksmiths;
+        }
+    }
+    factoryElement.onclick = function () {
+        if(clicks >= fyC){
+           clicks -= fyC;
+           factories++;
+           fyC = Math.floor(100 * 1.15 * factories);
+           console.log("print");
+           document.getElementById("fyT").innerText = "Gives 50 octonauts every second. Costs: " + fyC + " octonauts";
+            document.getElementById("partC").innerText = "Farmers: " + farmers + " Crewmates: " + octos + " Factories: " + factories + " Locksmiths: " + locksmiths;
+        }
+    }
+    
+    locksmithElement.onclick = function () {
+        if(clicks >= lsC){
+            clicks -= lsC;
+            lsB++;
+            locksmiths++;
+            lsC = Math.floor(25000 * 1.15 * lsB);
+            document.getElementById("lT").innerText = "Makes 1/4 of the key for 10,000 octonauts. Disappears after use. Costs: " + lsC;
+            document.getElementById("kT").innerText = "The key. Costs: 4 key fragments and 100000 octonauts"
+            document.getElementById("partC").innerText = "Farmers: " + farmers + " Crewmates: " + octos + " Factories: " + factories + " Locksmiths: " + locksmiths;
+        }
+    }
+    
+    keyElement.onclick = function() {
+        if(clicks >= 100000 && fragments >= 4){
+            clicks -= 100000;
+            fragments -= 4;
+            document.getElementById("key").style.visibility = "visible";
+        }
+    }
+    
 
     document.getElementById("back_button").onclick = function(){
         window.location.href="linus.html";
@@ -94,11 +156,20 @@
     
     
     const farm = () =>{
-      clicks += 2 * farmers;
+      clicks += 15 * farmers;
+      clicks += 50 * factories;
       document.getElementById("counter").innerText = "Octonauts: " + clicks;
+
+        if(clicks >= 10000 && locksmiths >= 1){
+            clicks -= 10000;
+            locksmiths--;
+            fragments++;
+            document.getElementById("fragCounter").innerText = "Key Fragments: " + fragments;
+        } 
     };
     //+2 octonauts per farmer every sec
     setInterval(farm,1000);
+    
 
 </script>
 

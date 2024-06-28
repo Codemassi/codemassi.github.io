@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html style="font-size: 15px;font-family: 'RobotoMono Nerd Font', Roboto, sans-serif;" lang="en"
+      xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <link rel="icon" type="image/x-icon" href="favicons/linusfavicon.ico">
+    <link rel="stylesheet" type="text/css" href="random.css">
+    <title>Test your luck</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+
+<main>
+    <div>
+        <span class="circle" id="exit"></span>
+        <img src="back_button.png" alt="back" id="back_button" draggable="false">
+<div id="elements">
+    <h1 id="header">Guess the number 0-1000</h1>
+    <input type="text" id="input">
+    <input type="button" id="button" value="Submit" onclick="eval()">
+    <h2 id="texts"></h2>
+    <h3 id="tries">Attempts Left: 10</h3>
+</div>
+
+        <img src="Key.png" id="key" style="visibility: hidden">
+    </div>
+
+</main>
+
+
+<script>
+
+    document.getElementById("back_button").onclick = function(){
+        window.location.href="linus.html";
+    }
+    
+    let number=Math.floor(Math.random() * 1000);
+    let attempts = 10;
+    
+    let input = document.getElementById("input");
+    let correct = 0;
+    let texts = document.getElementById("texts");
+    let attemptsElem = document.getElementById("tries");
+    let hasKey = 0; 
+    
+    function eval() {
+        attempts--;
+        if(input.value < number){
+            texts.innerText = "Higher";
+            attemptsElem.innerText = "Attempts Left: " + attempts;
+        }
+        else if(input.value > number){
+            texts.innerText = "Lower";
+            attemptsElem.innerText = "Attempts Left: " + attempts;
+        }
+        else if(input.value == number){
+            texts.innerText = "Correct!";
+            correct = 1;
+            attemptsElem.innerText = "Attempts Left: " + attempts;
+            document.getElementById("key").style.visibility = "visible";
+        }
+        if(attempts <= 0 && correct != 1){
+            attemptsElem.innerText = "Attempts Left: " + attempts;
+           texts.innerText = "You lose! The number was " + number;
+           document.getElementById("button").value = "Retry";
+           document.getElementById("button").onclick = function () {
+               location.reload();
+            }
+        }
+    }
+    
+    document.getElementById("key").onclick = function (){
+        if(hasKey == 0){
+            playSound("sound/key-get.mp3");
+            //Add key0
+            localStorage.setItem("key2", "y");
+            document.getElementById("key").src = "keyCollected.png";
+            hasKey = 1;
+        }
+    }
+
+</script>
+
+
+
+
+<script>
+    //Sound effects code
+    function playSound(url) {
+        const audio = new Audio(url);
+        audio.play();
+    }
+</script>
+
+</html>
+

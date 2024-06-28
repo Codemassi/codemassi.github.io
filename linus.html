@@ -3,9 +3,8 @@
       xmlns="http://www.w3.org/1999/html">
 
 
-<body style="background-size: 20vh; filter: drop-shadow(0 0 10px black)">
 
-</body>
+
 
 <head>
     <link rel="icon" type="image/x-icon" href="favicons/linusfavicon.ico">
@@ -13,6 +12,11 @@
     <title>THE VAULT</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
+
+
+<body style="background-size: 20vh; filter: drop-shadow(0 0 10px black);">
+
+</body>
 
 <main>
     <div id="lightDIV">
@@ -83,19 +87,53 @@
    document.getElementById("portal2").onclick = function(){
        window.location.href="diss.html";
    }
+   document.getElementById("portal3").onclick = function (){
+        window.location.href="random.html";
+   }
    document.getElementById("portal4").onclick = function (){
         window.location.href="clicker.html";
    }
 
    
    let keyCount = 0;
+  
    
-   //Change portal colors
-   if("key1" in localStorage){
+    
+   //Change portal colors and update keycounter
+   if("key0" in localStorage){
         keyCount++;
-        document.getElementById("portal1").style.backgroundImage = "portal2.png";
+        document.getElementById("portal1").style.backgroundImage = 'url("portal2.png")';
+        console.log("1");
+   }
+   if("key1" in localStorage){
+       keyCount++;
+       document.getElementById("portal2").style.backgroundImage = 'url("portal2.png")';
+       console.log("2");
+   }
+   if("key2" in localStorage){
+       keyCount++;
+       document.getElementById("portal3").style.backgroundImage = 'url("portal2.png")';
+   }
+   if("key3" in localStorage){
+       keyCount++;
+       document.getElementById("portal4").style.backgroundImage =  'url("portal2.png")';
    }
 
+   if(keyCount >= 4){
+       
+       document.getElementById("door").src = "Door_Open.png";
+
+       document.getElementById("keyCount").style.visibility="hidden";
+   }
+   //Update key counter
+   document.getElementById("keyCount").innerText = "Keys: " + keyCount;
+   
+   document.getElementById("door").onclick = function () {
+       if(keyCount >= 4){
+           window.location.href="birthday.html";
+       }
+   }
+   
 </script>
 
 <script>

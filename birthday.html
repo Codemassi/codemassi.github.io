@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html style="font-size: 15px;font-family: 'RobotoMono Nerd Font', Roboto, sans-serif;" lang="en"
+      xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <link rel="icon" type="image/x-icon" href="favicons/linusfavicon.ico">
+    <link rel="stylesheet" type="text/css" href="birthday.css">
+    <title>Happy Birthday</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+
+<main>
+
+
+    <div>
+        <span class="circle" id="exit"></span>
+        <img src="back_button.png" alt="back" id="back_button" draggable="false">
+        <button id="click"onclick="peepeepoopoo()">Click here :)</button>
+        <div id="text" style="visibility: hidden">
+            <h1>Happy Birthday</h1>
+            <h2>I'll give you $20 or something later idk</h2>
+            <h3>Made in 5 days by Massimo Zim</h3>
+            <img src="cake.png" alt="birthday cake" id="cake">
+            <h3>Click on the cake to destroy the keys and reset progress!</h3>
+        </div>
+        
+    </div>
+
+</main>
+
+
+<script>
+    
+    document.getElementById("back_button").onclick = function(){
+             window.location.href="linus.html";
+    }
+    
+    document.getElementById("cake").onclick = function (){
+        console.log("Clearing localstorage");
+        localStorage.clear();
+        playSound("sound/destroy.mp3");
+    }
+   
+    const peepeepoopoo = () =>{
+        console.log("aaa");
+       playSound("sound/birthdaysong.mp3");
+       document.getElementById("click").style.visibility="hidden";
+       document.getElementById("text").style.visibility="visible";
+        setInterval(peepeepoopoo,80000);
+    };
+</script>
+
+
+
+
+<script>
+    //Sound effects code
+    function playSound(url) {
+        const audio = new Audio(url);
+        audio.play();
+    }
+</script>
+
+</html>
+

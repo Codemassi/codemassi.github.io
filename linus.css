@@ -14,17 +14,16 @@
 }
 
 #keyCount{
-    z-index: 2;
     position: fixed;
     left: 0px;
     right: 0px;
     bottom: 8px;
     width: 12vw;
-    text-align: center;
     max-width: calc(100vw - 8px *2);
     margin-inline: auto;
     white-space: nowrap;
     user-select: none;
+    z-index: 2;
 }
 
 #switch{
@@ -40,7 +39,6 @@
 }
 
 h1{
-    position: static;
     text-align: center;
     margin-top: 20vh;
     color: #f9e2af;
@@ -48,6 +46,10 @@ h1{
     -webkit-text-stroke-width: 0.2vw;
     -webkit-text-stroke-color: #1e1e2e;
     user-select: none;
+}
+
+#CTKText{
+    position: static;
 }
 
 
