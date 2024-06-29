@@ -5,18 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cab10ec8-e324-4e94-8c41-6b3f924d0a39" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/birthday.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/random.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/random.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.codemassi.github.io.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.codemassi.github.io.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Door_Open.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/clicker.css" beforeDir="false" afterPath="$PROJECT_DIR$/clicker.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clicker.html" beforeDir="false" afterPath="$PROJECT_DIR$/clicker.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/diss.html" beforeDir="false" afterPath="$PROJECT_DIR$/diss.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/linus.css" beforeDir="false" afterPath="$PROJECT_DIR$/linus.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/linus.html" beforeDir="false" afterPath="$PROJECT_DIR$/linus.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trickymouse.css" beforeDir="false" afterPath="$PROJECT_DIR$/birthday.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trickymouse.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/linusslideshow.html" beforeDir="false" afterPath="$PROJECT_DIR$/linusslideshow.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +77,9 @@
       <workItem from="1719528614819" duration="438000" />
       <workItem from="1719562025920" duration="503000" />
       <workItem from="1719566881166" duration="5316000" />
+      <workItem from="1719591914378" duration="1382000" />
+      <workItem from="1719684427002" duration="212000" />
+      <workItem from="1719690285526" duration="143000" />
     </task>
     <servers />
   </component>
@@ -93,6 +87,29 @@
     <option name="version" value="3" />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
